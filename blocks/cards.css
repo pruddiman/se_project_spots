@@ -1,0 +1,19 @@
+.content {
+}
+
+.cards {
+  display: grid;
+  border-bottom: 1px solid #212121;
+}
+
+.card {
+}
+
+.card__description {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.card__icon {
+}
