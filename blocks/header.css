@@ -1,8 +1,17 @@
 .header {
-  display: flex;
   border-bottom: 1px solid #212121;
+  background-color: #fff;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
 }
 
+.header__logo {
+  width: 94px;
+  height: 26px;
+}
+
+/*
 .header__avatar-section {
 }
 
@@ -33,3 +42,4 @@
 
 .header__large-button {
 }
+*/
