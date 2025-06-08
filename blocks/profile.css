@@ -1,30 +1,40 @@
-.content {
-  max-width: 1280px;
-}
-
 .profile {
   display: flex;
-  max-width: 1280px;
-  margin: 0 auto;
+  border-bottom: 1px solid rgba(33, 33, 33, 0.4);
+  padding: 34px 0 20px;
 }
 
 .profile__avatar {
+  margin-right: 20px;
 }
 
 .profile__column {
+  display: flex;
+  flex-direction: column;
 }
 
 .profile__title {
   font-family: "Poppins", sans-serif;
+  margin: 0 0 12px;
 }
 
 .profile__subtitle {
   font-family: "Poppins", sans-serif;
+  margin: 0;
 }
 
 .profile__edit-button {
   font-family: "Poppins", sans-serif;
-  margin-top: auto;
+  background-color: #fcf5e5;
+  border: none;
+  opacity: 0.4;
+  transition: opacity 0.5s ease;
+  margin: auto auto 0 0;
+  padding: 0;
+}
+
+.profile__edit-button:hover {
+  opacity: 1;
 }
 
 .profile__new-post {
@@ -35,4 +45,11 @@
   background-color: #212121;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
+  border-radius: 8px;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.profile__new-post:hover {
+  opacity: 0.4;
 }

@@ -1,12 +1,10 @@
-@media screen and (max-width: 1440px) {
-}
-
-@media screen and (min-width: 320px) {
-}
-
 .page {
   background-color: #fcf5e5;
   min-height: 100vh;
   max-width: 100vw;
+}
+
+.page__section {
+  max-width: 1280px;
   margin: 0 auto;
 }

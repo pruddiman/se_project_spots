@@ -1,4 +1,8 @@
 .footer {
+  border-top: 1px solid rgba(33, 33, 33, 0.4);
 }
 .footer__copyright {
+  margin-top: auto;
+  text-align: center;
+  padding-bottom: 60px;
 }
