@@ -1,15 +1,3 @@
-/* @media screen and (max-width: 1280px) {
-}
-
-@media screen and (min-width: 764px) {
-}
-
-@media screen and (min-width: 320px) {
-  .cards__list {
-    flex-direction: column;
-  }
-} */
-
 .page {
   background-color: #fcf5e5;
   min-height: 100vh;

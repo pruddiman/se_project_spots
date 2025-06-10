@@ -52,10 +52,15 @@
 }
 
 @media screen and (max-width: 627px) {
+  .cards {
+    padding: 20px 0;
+  }
+
   .cards__list {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 22px;
   }
 
   .card {
