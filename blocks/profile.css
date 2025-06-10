@@ -6,6 +6,8 @@
 
 .profile__avatar {
   margin-right: 20px;
+  height: 190px;
+  width: 190px;
 }
 
 .profile__column {
@@ -16,6 +18,7 @@
 .profile__title {
   margin: 0 0 12px;
   font-weight: 500;
+  font-size: 32px;
   line-height: 1;
 }
 
@@ -58,4 +61,40 @@
   padding-right: 8px;
   width: 12px;
   height: 12px;
+}
+
+@media screen and (max-width: 627px) {
+  .profile {
+    flex-direction: column;
+    max-width: 288px;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .profile__avatar {
+    margin: 0 0 12px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .profile__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1;
+    margin: 0;
+  }
+
+  .profile__subtitle {
+    margin: 6px 0 32px;
+  }
+
+  .profile__edit-button {
+    margin: 0 auto 20px;
+  }
+
+  .profile__new-post {
+    width: 100%x;
+    margin: 0;
+  }
 }
