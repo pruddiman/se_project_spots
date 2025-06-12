@@ -4,7 +4,7 @@ This is an image sharing site titled "SPOTS"
 
 ## Description
 
-The name of this project is called SPOTS. There are a variety of elements in this project such as grid display, flexbox, media queries (responsive web design), imported font faces (Poppins), hover effects on buttons, within three main sections of the webpage header, content and footer. It contains 6 different images with a property to hide overflowing text depending on the screen size from 320px to 1440px. Flexbox intiates on all sections of the page at 627px. The website was inspected and viewed on Edge and tested in Chrome and Firefox. I used VSCode and Gitbash to develop and commit and push changes.
+The name of this project is called SPOTS. There are a variety of properties in this project such as grid display, flexbox, media queries (responsive web design), imported font faces (Poppins), hover effects on buttons, within three main sections of the webpage header, content and footer. It contains 6 different images with a property to hide overflowing text depending on the screen size from 320px to 1440px. Flexbox intiates on all sections of the page at 627px. The website was inspected and viewed on Edge and tested in Chrome and Firefox. I used VSCode and Gitbash to develop and commit and push changes.
 
 ## Tech Stack
 
