@@ -24,6 +24,6 @@ VSCode
 
 This webpage is deployed to GitHub Pages.
 
--Deployment Link:
+-Deployment Link: https://pruddiman.github.io/se_project_spots/index.html
 
 - [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
