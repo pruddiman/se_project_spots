@@ -1,3 +1,30 @@
+const initialCards = [
+  [
+    "Val Thorens",
+    "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg",
+  ],
+  [
+    "Restaurant terrace",
+    "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/2-photo-by-ceiline-from-pexels.jpg",
+  ],
+  [
+    "An outdoor cafe",
+    "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/3-photo-by-tubanur-dogan-from-pexels.jpg",
+  ],
+  [
+    "A very long bridge, over the forest and through the trees",
+    "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/4-photo-by-maurice-laschet-from-pexels.jpg",
+  ],
+  [
+    "Tunnel with morning light",
+    "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/5-photo-by-van-anh-nguyen-from-pexels.jpg",
+  ],
+  [
+    "Mountain house",
+    "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
+  ],
+];
+
 const editProfileButton = document.querySelector(".profile__edit-button");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const closeProfileButton = editProfileModal.querySelector(
@@ -65,4 +92,10 @@ editProfileButton.addEventListener("click", function () {
 
 newPostButton.addEventListener("click", function () {
   newPostModal.classList.add("modal_is-opened");
+});
+
+// initialCards array -- use forEach() that loops through the entire array and log the name of the current array item to the console to check
+
+initialCards.forEach(function (initialCard, index) {
+  console.log(`Object ${index}: ${initialCard}`);
 });
