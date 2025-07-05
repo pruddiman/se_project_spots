@@ -101,3 +101,5 @@ initialCards.forEach(function (initialCard, index) {
     `Object ${index}: Name - ${initialCard.name}, ${initialCard.link}`
   );
 });
+
+console.log(initialCards);
