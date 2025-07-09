@@ -52,7 +52,7 @@ function handleProfileFormSubmit(evt) {
   evt.preventDefault();
   profileNameElement.textContent = nameInput.value;
   profileJobElement.textContent = jobInput.value;
-  editProfileModal.classList.remove("modal_is-opened");
+  closeModal(editProfileModal);
 }
 profileFormElement.addEventListener("submit", handleProfileFormSubmit);
 
@@ -67,7 +67,7 @@ function handleAddCardSubmit(evt) {
   captionInput.value = "";
   linkInput.value = "";
 
-  newPostModal.classList.remove("modal_is-opened");
+  closeModal(newPostModal);
 }
 
 addCardFormElement.addEventListener("submit", handleAddCardSubmit);
@@ -75,23 +75,23 @@ addCardFormElement.addEventListener("submit", handleAddCardSubmit);
 //BUTTON HANDLERS
 
 closeProfileButton.addEventListener("click", function () {
-  editProfileModal.classList.remove("modal_is-opened");
+  closeModal(editProfileModal);
 });
 
 closeNewPostButton.addEventListener("click", function () {
   captionInput.value = "";
   linkInput.value = "";
-  newPostModal.classList.remove("modal_is-opened");
+  closeModal(newPostModal);
 });
 
 editProfileButton.addEventListener("click", function () {
-  editProfileModal.classList.add("modal_is-opened");
+  openModal(editProfileModal);
   nameInput.value = profileNameElement.textContent;
   jobInput.value = profileJobElement.textContent;
 });
 
 newPostButton.addEventListener("click", function () {
-  newPostModal.classList.add("modal_is-opened");
+  openModal(newPostModal);
 });
 
 // initialCards array -- use forEach() that loops through the entire array and log the name of the current array item to the console to check
@@ -103,3 +103,13 @@ initialCards.forEach(function (initialCard, index) {
 });
 
 console.log(initialCards);
+
+//CREATE openModal() and closeModal() functions ----> closeProfileButton and closeNewPostButton and same for opening both
+
+function openModal(modal) {
+  modal.classList.add("modal_is-opened");
+}
+
+function closeModal(modal) {
+  modal.classList.remove("modal_is-opened");
+}
