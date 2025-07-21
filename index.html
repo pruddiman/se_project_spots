@@ -45,86 +45,7 @@
           </button>
         </section>
         <section class="cards">
-          <ul class="cards__list">
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/Val_Thorens.svg"
-                alt="Val Thorens Image"
-              />
-              <div class="card__content">
-                <h2 class="card__title">Val Thorens</h2>
-                <button class="card__button" type="button">
-                  <img src="./images/Like_Button.svg" alt="Like Button" />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/Restaurant_Terrace.svg"
-                alt="Restaurant Terrace"
-              />
-              <div class="card__content">
-                <h2 class="card__title">Restaurant Terrace</h2>
-                <button class="card__button" type="button">
-                  <img src="./images/Like_Button.svg" alt="Like Button" />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/Outdoor_cafe.svg"
-                alt="Restaurant Terrace"
-              />
-              <div class="card__content">
-                <h2 class="card__title">An outdoor cafe</h2>
-                <button class="card__button" type="button">
-                  <img src="./images/Like_Button.svg" alt="Like Button" />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/Long_Bridge.svg"
-                alt="Restaurant Terrace"
-              />
-              <div class="card__content">
-                <h2 class="card__title">A very long bridge, over the forest</h2>
-                <button class="card__button" type="button">
-                  <img src="./images/Like_Button.svg" alt="Like Button" />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/Tunnel.svg"
-                alt="Restaurant Terrace"
-              />
-              <div class="card__content">
-                <h2 class="card__title">Tunnel with morning light</h2>
-                <button class="card__button" type="button">
-                  <img src="./images/Like_Button.svg" alt="Like Button" />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/Cabin.svg"
-                alt="Restaurant Terrace"
-              />
-              <div class="card__content">
-                <h2 class="card__title">Mountain House</h2>
-                <button class="card__button" type="button">
-                  <img src="./images/Like_Button.svg" alt="Like Button" />
-                </button>
-              </div>
-            </li>
-          </ul>
+          <ul class="cards__list"></ul>
         </section>
       </main>
       <footer class="footer page__section">
@@ -196,7 +117,37 @@
           </form>
         </div>
       </div>
+      <div class="modal modal_type_preview" id="preview-modal">
+        <div class="modal__image-container">
+          <button
+            class="modal__close-button modal__close-button_type_preview"
+            type="button"
+          >
+            <img
+              src="./images/Close_icon_white.svg"
+              alt="Close Button"
+              class="modal__close-icon"
+            />
+          </button>
+          <img class="modal__image" src="#" alt="" />
+          <h2 class="modal__caption"></h2>
+        </div>
+      </div>
     </div>
+    <template id="card-template">
+      <li class="card">
+        <button class="card__button-delete" type="button">
+          <img src="./images/State=Default.svg" alt="Delete Button" />
+        </button>
+        <img class="card__image" src="#" alt="" />
+        <div class="card__content">
+          <h2 class="card__title"></h2>
+          <button class="card__button" type="button">
+            <img src="./images/Like_Button.svg" alt="Like Button" />
+          </button>
+        </div>
+      </li>
+    </template>
     <script src="scripts/index.js"></script>
   </body>
 </html>
