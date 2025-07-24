@@ -78,10 +78,12 @@ function handleAddCardSubmit(evt) {
   };
 
   const newCard = getCardElement(newCardData);
-
-  cardsList.append(newCard);
-
+  cardsList.prepend(newCard);
+  captionInput.value = "";
+  linkInput.value = "";
   closeModal(newPostModal);
+
+  addCardFormElement.reset();
 }
 
 addCardFormElement.addEventListener("submit", handleAddCardSubmit);
@@ -93,8 +95,6 @@ closeProfileButton.addEventListener("click", function () {
 });
 
 closeNewPostButton.addEventListener("click", function () {
-  captionInput.value = "";
-  linkInput.value = "";
   closeModal(newPostModal);
 });
 

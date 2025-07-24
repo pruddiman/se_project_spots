@@ -141,15 +141,17 @@
 
 .modal__caption {
   color: #fff;
-  margin-top: 8px 0 0;
   background-color: #212121;
-  width: 198px;
   border-radius: 8px;
   padding: 4px 8px;
   line-height: 1.2;
   font-size: 20px;
   font-weight: 500;
   font-family: "Poppins," Arial, sans-serif;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 10px);
 }
 
 @media screen and (max-width: 627px) {
@@ -197,5 +199,9 @@
   .modal__save-button {
     width: 100%;
     max-width: none;
+  }
+
+  .modal__caption {
+    font-size: 16px;
   }
 }

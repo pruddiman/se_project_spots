@@ -11,6 +11,10 @@
   border-radius: 8px;
 }
 
+.card__image:hover {
+  cursor: pointer;
+}
+
 .card__content {
   display: flex;
   justify-content: space-between;
@@ -30,6 +34,7 @@
 
 .card__button {
   background-color: #fcf5e5;
+  background-image: url(../images/Like_Button.svg);
   border: none;
   width: 23px;
   height: 20px;
@@ -42,6 +47,8 @@
 
 .card__button_liked {
   background-image: url(../images/State=Liked.svg);
+  background-color: transparent;
+  background-repeat: no-repeat;
   opacity: 1;
 }
 
@@ -63,6 +70,7 @@
   border: none;
   padding: 0;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .card__button-delete:hover {
