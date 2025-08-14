@@ -46,6 +46,7 @@ const profileJobElement = document.querySelector(".profile__subtitle");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostButton = document.querySelector(".profile__new-post");
 const closeNewPostButton = newPostModal.querySelector(".modal__close-button");
+const saveSubmitButton = newPostModal.querySelector(".modal__save-button");
 
 const addCardFormElement = newPostModal.querySelector("#newpost-form");
 const captionInput = newPostModal.querySelector("#caption-post");
@@ -81,9 +82,9 @@ function handleAddCardSubmit(evt) {
   cardsList.prepend(newCard);
   captionInput.value = "";
   linkInput.value = "";
-  closeModal(newPostModal);
-
   addCardFormElement.reset();
+  disableButton(saveSubmitButton, settings);
+  closeModal(newPostModal);
 }
 
 addCardFormElement.addEventListener("submit", handleAddCardSubmit);
@@ -112,12 +113,29 @@ previewModalCloseBtn.addEventListener("click", function () {
   closeModal(previewModal);
 });
 
+function handleOverlayClick(evt) {
+  if (evt.target === evt.currentTarget) {
+    closeModal(evt.currentTarget);
+  }
+}
+
+function handleEscKeyDown(evt) {
+  if (evt.key === "Escape") {
+    const modal = document.querySelector(".modal_is-opened");
+    closeModal(modal);
+  }
+}
+
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  modal.addEventListener("click", handleOverlayClick);
+  document.addEventListener("keydown", handleEscKeyDown);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  modal.removeEventListener("click", handleOverlayClick);
+  document.removeEventListener("keydown", handleEscKeyDown);
 }
 
 const cardTemplate = document
