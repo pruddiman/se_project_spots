@@ -80,8 +80,6 @@ function handleAddCardSubmit(evt) {
 
   const newCard = getCardElement(newCardData);
   cardsList.prepend(newCard);
-  captionInput.value = "";
-  linkInput.value = "";
   addCardFormElement.reset();
   disableButton(saveSubmitButton, settings);
   closeModal(newPostModal);
