@@ -46,7 +46,7 @@ const profileJobElement = document.querySelector(".profile__subtitle");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostButton = document.querySelector(".profile__new-post");
 const closeNewPostButton = newPostModal.querySelector(".modal__close-button");
-const saveSubmitButton = newPostModal.querySelector(".modal__save-button");
+const cardSubmitButton = newPostModal.querySelector(".modal__save-button");
 
 const addCardFormElement = newPostModal.querySelector("#newpost-form");
 const captionInput = newPostModal.querySelector("#caption-post");
@@ -81,7 +81,7 @@ function handleAddCardSubmit(evt) {
   const newCard = getCardElement(newCardData);
   cardsList.prepend(newCard);
   addCardFormElement.reset();
-  disableButton(saveSubmitButton, settings);
+  disableButton(cardSubmitButton, settings);
   closeModal(newPostModal);
 }
 
@@ -101,6 +101,7 @@ editProfileButton.addEventListener("click", function () {
   openModal(editProfileModal);
   nameInput.value = profileNameElement.textContent;
   jobInput.value = profileJobElement.textContent;
+  resetValidation(profileFormElement, [nameInput, jobInput], settings);
 });
 
 newPostButton.addEventListener("click", function () {
