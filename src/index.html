@@ -6,7 +6,6 @@
     <meta name="description" content="SPOTS" />
     <meta name="keywords" content="spots, Bessie Coleman" />
     <meta name="author" content="Philip Ruddiman" />
-    <link rel="stylesheet" href="./pages/index.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <title>Spots</title>
   </head>
@@ -21,11 +20,20 @@
       </header>
       <main class="content">
         <section class="profile page__section">
-          <img
-            class="profile__avatar"
-            src="./images/Avatar.jpg"
-            alt="Bessie Coleman Avatar"
-          />
+          <div class="profile__avatar-container">
+            <button class="profile__avatar-btn" type="button">
+              <img
+                class="profile__pencil-icon"
+                src="./images/Light_Pencil_Avatar.svg"
+                alt="Profile Avatar Pencil Icon"
+              />
+            </button>
+            <img
+              class="profile__avatar"
+              src="./images/Avatar.jpg"
+              alt="Bessie Coleman Avatar"
+            />
+          </div>
           <div class="profile__column">
             <h1 class="profile__title">Bessie Coleman</h1>
             <p class="profile__subtitle">Civil Aviator</p>
@@ -172,7 +180,61 @@
         </div>
       </li>
     </template>
-    <script src="scripts/index.js"></script>
-    <script src="scripts/validation.js"></script>
+
+    <div class="modal" id="avatar-modal">
+      <div class="modal__container">
+        <button class="modal__close-button" type="button">
+          <img
+            src="./images/Close_Icon.svg"
+            alt="Close Button"
+            class="modal__close-icon"
+          />
+        </button>
+        <h2 class="modal__title">Edit Avatar</h2>
+        <form class="modal__form" name="edit_avatar" id="edit-avatar-image">
+          <label for="profile-avatar-input" class="modal__label"
+            >Avatar
+            <input
+              class="modal__input"
+              name="edit_avatar"
+              placeholder="Insert Image"
+              id="profile-avatar-input"
+              required
+            />
+            <span
+              id="profile-avatar-input-error"
+              class="modal__error modal__error_visible"
+            ></span>
+          </label>
+          <button class="modal__save-button" type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+
+    <!--TODO style modal and remove modal is opened class when hidden-->
+
+    <div class="modal" id="delete-modal">
+      <div class="modal__container">
+        <button
+          class="modal__close-button modal__close-button_type_delete"
+          type="button"
+        >
+          <img
+            src="./images/Close_Icon.svg"
+            alt="Close Button"
+            class="modal__close-icon"
+          />
+        </button>
+        <h2 class="modal__delete-title">
+          Are you sure you want to delete this image?
+        </h2>
+        <form class="modal__form" name="delete_form" id="delete-form">
+          <div class="modal__button-container">
+            <button class="modal__delete-button" type="submit">Delete</button>
+            <button class="modal__cancel-button" type="button">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

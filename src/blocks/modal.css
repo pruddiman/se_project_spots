@@ -61,6 +61,11 @@
   opacity: 1;
 }
 
+.modal__close-button_type_delete {
+  top: 16px;
+  right: 16px;
+}
+
 .modal__title {
   width: 169px;
   height: 32px;
@@ -70,6 +75,18 @@
   font-size: 32px;
   color: rgba(33, 33, 33, 1);
   margin: 0 0 32px 0;
+}
+
+.modal__delete-title {
+  max-width: 590px;
+  font-family: "Poppins," Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  font-size: 24px;
+  color: rgba(33, 33, 33, 1);
+  margin: 0 0 32px 0;
+  justify-content: space-between;
+  text-align: center;
 }
 
 .modal__form {
@@ -145,6 +162,37 @@
 
 .modal__save-button_type_inactive {
   opacity: 0.5;
+}
+
+.modal__button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.modal__delete-button {
+  max-width: 156px;
+  background-color: #ff6565;
+  color: #212121;
+  border-radius: 8px;
+  padding: 18px 32px;
+  font-family: "Poppins," Arial, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.modal__cancel-button {
+  max-width: 156px;
+  background-color: #ffffff;
+  color: #212121;
+  border: 1px solid #212121;
+  border-radius: 8px;
+  padding: 18px 32px;
+  font-family: "Poppins," Arial, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
 }
 
 .modal__image-container {
