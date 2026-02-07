@@ -304,7 +304,6 @@ function getCardElement(data, myUserId) {
   const cardTitleEl = cardElement.querySelector(".card__title");
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardElementLikeBtn = cardElement.querySelector(".card__button");
-  //TODO - if the card is liked, set the active class on the card like button
 
   if (data.isLiked) {
     cardElementLikeBtn.classList.add("card__button_liked");
