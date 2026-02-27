@@ -38,7 +38,7 @@ let selectedCardId;
 const editProfileButton = document.querySelector(".profile__edit-button");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const closeProfileButton = editProfileModal.querySelector(
-  ".modal__close-button"
+  ".modal__close-button",
 );
 const editAvatarBtn = document.querySelector(".profile__avatar-btn");
 
@@ -75,17 +75,19 @@ console.log("deleteForm:", deleteForm);
 
 const previewAvatarModal = document.querySelector("#avatar-modal");
 const avatarForm = previewAvatarModal.querySelector(".modal__form");
-const avatarSubmitBtn = previewAvatarModal.querySelector(".modal__save-button");
+const avatarModalSaveButton = previewAvatarModal.querySelector(
+  ".modal__save-button",
+);
 const avatarInput = previewAvatarModal.querySelector("#profile-avatar-input");
 const previewAvatarModalCloseBtn = previewAvatarModal.querySelector(
-  ".modal__close-button"
+  ".modal__close-button",
 );
 
 //EDIT PROFILE
 
 function handleProfileFormSubmit(evt) {
-  const avatarSubmitBtn = evt.submitter;
-  setSaveButtonText(avatarSubmitBtn, true, "Save", "Saving...");
+  const submitBtn = evt.submitter;
+  setSaveButtonText(submitBtn, true, "Save", "Saving...");
   evt.preventDefault();
   api
     .editUserInfo({ name: nameInput.value, about: jobInput.value })
@@ -96,7 +98,7 @@ function handleProfileFormSubmit(evt) {
     })
     .catch(console.error)
     .finally(() => {
-      setSaveButtonText(avatarSubmitBtn, false);
+      setSaveButtonText(submitBtn, false);
     });
 }
 
@@ -278,7 +280,7 @@ function getCardElement(data, myUserId) {
   cardTitleEl.textContent = data.name;
 
   const cardElementDeleteBtn = cardElement.querySelector(
-    ".card__button-delete"
+    ".card__button-delete",
   );
   cardElementDeleteBtn.addEventListener("click", () => {
     selectedCard = cardElement;
@@ -287,7 +289,7 @@ function getCardElement(data, myUserId) {
   });
 
   cardElementLikeBtn.addEventListener("click", (evt) =>
-    handleLike(evt, data._id)
+    handleLike(evt, data._id),
   );
 
   cardImageEl.addEventListener("click", function () {
