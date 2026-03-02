@@ -197,11 +197,6 @@ deleteModalCloseBtn.addEventListener("click", () => {
   closeModal(deleteModal);
 });
 
-openModal(previewModal);
-previewModalCaption.textContent = data.name;
-previewModalImage.src = data.link;
-previewModalImage.alt = data.name;
-
 function handleDeleteSubmit(evt) {
   const deleteButton = evt.submitter;
   setDeleteButtonText(deleteButton, true, "Delete", "Deleting...");
