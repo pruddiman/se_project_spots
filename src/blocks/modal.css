@@ -1,7 +1,10 @@
 .modal {
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+  transition:
+    visibility 0s linear 0.5s,
+    opacity 0.5s linear;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);
   top: 0;
@@ -53,6 +56,7 @@
 }
 
 .modal__close-button_type_preview:hover {
+  cursor: pointer;
   color: #212121;
 }
 
@@ -66,10 +70,17 @@
   right: 16px;
 }
 
+.modal__close-button_type_delete:hover {
+  cursor: pointer;
+  color: #212121;
+}
+
 .modal__title {
   width: 169px;
   height: 32px;
-  font-family: "Poppins," Arial, sans-serif;
+  font-family:
+    "Poppins," Arial,
+    sans-serif;
   font-weight: 500;
   line-height: 1;
   font-size: 32px;
@@ -79,7 +90,7 @@
 
 .modal__delete-title {
   max-width: 590px;
-  font-family: "Poppins," Arial, sans-serif;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
   font-weight: 500;
   line-height: 1;
   font-size: 24px;
@@ -100,7 +111,9 @@
   font-weight: 500;
   line-height: 1.1;
   font-size: 16px;
-  font-family: "Poppins," Arial, sans-serif;
+  font-family:
+    "Poppins," Arial,
+    sans-serif;
   margin: 0 0 32px;
 }
 
@@ -176,10 +189,17 @@
   color: #212121;
   border-radius: 8px;
   padding: 18px 32px;
-  font-family: "Poppins," Arial, sans-serif;
+  font-family:
+    "Poppins," Arial,
+    sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
+}
+
+.modal__delete-button:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 .modal__cancel-button {
@@ -189,10 +209,17 @@
   border: 1px solid #212121;
   border-radius: 8px;
   padding: 18px 32px;
-  font-family: "Poppins," Arial, sans-serif;
+  font-family:
+    "Poppins," Arial,
+    sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
+}
+
+.modal__cancel-button:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 .modal__image-container {
@@ -217,7 +244,9 @@
   line-height: 1.2;
   font-size: 20px;
   font-weight: 500;
-  font-family: "Poppins," Arial, sans-serif;
+  font-family:
+    "Poppins," Arial,
+    sans-serif;
   margin: 0;
   position: absolute;
   left: 0;
