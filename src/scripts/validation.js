@@ -1,6 +1,6 @@
 //CONFIGURATION OBJECT
 
-const settings = {
+export const settings = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__save-button",
@@ -59,9 +59,10 @@ const checkInputValidity = (formElement, inputElement, config) => {
 
 //VALIDATION FUNCTION
 
-const enableValidation = (config) => {
+export const enableValidation = (config) => {
   const formList = document.querySelectorAll(config.formSelector);
   formList.forEach((formElement) => {
+    if (formElement.id === "delete-form") return;
     setEventListeners(formElement, config);
   });
 };
@@ -92,4 +93,4 @@ const resetValidation = (formElement, inputList, config) => {
   });
 };
 
-enableValidation(settings);
+export { disableButton, resetValidation };

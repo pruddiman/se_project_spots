@@ -1,7 +1,10 @@
 .modal {
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+  transition:
+    visibility 0s linear 0.5s,
+    opacity 0.5s linear;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);
   top: 0;
@@ -53,6 +56,7 @@
 }
 
 .modal__close-button_type_preview:hover {
+  cursor: pointer;
   color: #212121;
 }
 
@@ -61,15 +65,39 @@
   opacity: 1;
 }
 
+.modal__close-button_type_delete {
+  top: 16px;
+  right: 16px;
+}
+
+.modal__close-button_type_delete:hover {
+  cursor: pointer;
+  color: #212121;
+}
+
 .modal__title {
   width: 169px;
   height: 32px;
-  font-family: "Poppins," Arial, sans-serif;
+  font-family:
+    "Poppins," Arial,
+    sans-serif;
   font-weight: 500;
   line-height: 1;
   font-size: 32px;
   color: rgba(33, 33, 33, 1);
   margin: 0 0 32px 0;
+}
+
+.modal__delete-title {
+  max-width: 590px;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  font-size: 24px;
+  color: rgba(33, 33, 33, 1);
+  margin: 0 0 32px 0;
+  justify-content: space-between;
+  text-align: center;
 }
 
 .modal__form {
@@ -83,7 +111,9 @@
   font-weight: 500;
   line-height: 1.1;
   font-size: 16px;
-  font-family: "Poppins," Arial, sans-serif;
+  font-family:
+    "Poppins," Arial,
+    sans-serif;
   margin: 0 0 32px;
 }
 
@@ -147,6 +177,51 @@
   opacity: 0.5;
 }
 
+.modal__button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.modal__delete-button {
+  max-width: 156px;
+  background-color: #ff6565;
+  color: #212121;
+  border-radius: 8px;
+  padding: 18px 32px;
+  font-family:
+    "Poppins," Arial,
+    sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.modal__delete-button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.modal__cancel-button {
+  max-width: 156px;
+  background-color: #ffffff;
+  color: #212121;
+  border: 1px solid #212121;
+  border-radius: 8px;
+  padding: 18px 32px;
+  font-family:
+    "Poppins," Arial,
+    sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.modal__cancel-button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
 .modal__image-container {
   padding: 0;
   position: relative;
@@ -169,7 +244,9 @@
   line-height: 1.2;
   font-size: 20px;
   font-weight: 500;
-  font-family: "Poppins," Arial, sans-serif;
+  font-family:
+    "Poppins," Arial,
+    sans-serif;
   margin: 0;
   position: absolute;
   left: 0;
